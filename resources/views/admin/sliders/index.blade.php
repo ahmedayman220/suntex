@@ -41,6 +41,9 @@
                             {{ trans('cruds.slider.fields.hero_image') }}
                         </th>
                         <th>
+                            {{ trans('cruds.slider.fields.product_link') }}
+                        </th>
+                        <th>
                             &nbsp;
                         </th>
                     </tr>
@@ -67,6 +70,9 @@
                         <td>
                         </td>
                         <td>
+                        </td>
+                        <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                         </td>
                         <td>
                         </td>
@@ -103,6 +109,9 @@
                                         <img src="{{ $slider->hero_image->getUrl('thumb') }}">
                                     </a>
                                 @endif
+                            </td>
+                            <td>
+                                {{ $slider->product_link ?? '' }}
                             </td>
                             <td>
                                 @can('slider_show')

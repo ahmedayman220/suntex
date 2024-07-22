@@ -37,6 +37,7 @@ class Slider extends Model implements HasMedia
         'title',
         'description',
         'lang_code',
+        'product_link',
         'created_at',
         'updated_at',
         'deleted_at',

@@ -13,6 +13,7 @@ class CreateSlidersTable extends Migration
             $table->string('title');
             $table->longText('description');
             $table->string('lang_code');
+            $table->string('product_link');
             $table->timestamps();
             $table->softDeletes();
         });
