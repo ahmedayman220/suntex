@@ -34,6 +34,10 @@ class UpdateSliderRequest extends FormRequest
             'hero_image' => [
                 'required',
             ],
+            'product_link' => [
+                'string',
+                'required',
+            ],
         ];
     }
 }

@@ -71,6 +71,14 @@
                             @endif
                         </td>
                     </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.slider.fields.product_link') }}
+                        </th>
+                        <td>
+                            {{ $slider->product_link }}
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

@@ -67,6 +67,16 @@
                 <span class="help-block">{{ trans('cruds.slider.fields.hero_image_helper') }}</span>
             </div>
             <div class="form-group">
+                <label class="required" for="product_link">{{ trans('cruds.slider.fields.product_link') }}</label>
+                <input class="form-control {{ $errors->has('product_link') ? 'is-invalid' : '' }}" type="text" name="product_link" id="product_link" value="{{ old('product_link', '') }}" required>
+                @if($errors->has('product_link'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('product_link') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.slider.fields.product_link_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>
