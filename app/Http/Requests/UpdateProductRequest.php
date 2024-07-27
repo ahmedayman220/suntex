@@ -17,11 +17,28 @@ class UpdateProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => [
+            'name_en' => [
                 'string',
                 'required',
             ],
-            'description' => [
+            'name_ar' => [
+                'string',
+                'required',
+            ],
+            'name_he' => [
+                'string',
+                'required',
+            ],
+            'description_en' => [
+                'required',
+            ],
+            'description_ar' => [
+                'required',
+            ],
+            'description_he' => [
+                'required',
+            ],
+            'photo' => [
                 'required',
             ],
             'categories.*' => [
@@ -37,9 +54,6 @@ class UpdateProductRequest extends FormRequest
             'tags' => [
                 'required',
                 'array',
-            ],
-            'photo' => [
-                'required',
             ],
             'lang_code' => [
                 'required',

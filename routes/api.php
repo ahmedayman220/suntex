@@ -5,10 +5,6 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     Route::post('sliders/media', 'SliderApiController@storeMedia')->name('sliders.storeMedia');
     Route::apiResource('sliders', 'SliderApiController');
 
-    // About Us
-    Route::post('about-uss/media', 'AboutUsApiController@storeMedia')->name('about-uss.storeMedia');
-    Route::apiResource('about-uss', 'AboutUsApiController');
-
     // Faq
     Route::apiResource('faqs', 'FaqApiController');
 
@@ -25,4 +21,8 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Setting
     Route::post('settings/media', 'SettingApiController@storeMedia')->name('settings.storeMedia');
     Route::apiResource('settings', 'SettingApiController');
+
+    // About Us Section
+    Route::post('about-us-sections/media', 'AboutUsSectionApiController@storeMedia')->name('about-us-sections.storeMedia');
+    Route::apiResource('about-us-sections', 'AboutUsSectionApiController');
 });

@@ -30,16 +30,22 @@
                             {{ trans('cruds.product.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.product.fields.name') }}
+                            {{ trans('cruds.product.fields.name_en') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.name_ar') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.name_he') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.product.fields.photo') }}
                         </th>
                         <th>
                             {{ trans('cruds.product.fields.category') }}
                         </th>
                         <th>
                             {{ trans('cruds.product.fields.tag') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.product.fields.photo') }}
                         </th>
                         <th>
                             {{ trans('cruds.product.fields.lang_code') }}
@@ -58,6 +64,14 @@
                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                         </td>
                         <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                        </td>
+                        <td>
                             <select class="search">
                                 <option value>{{ trans('global.all') }}</option>
                                 @foreach($product_categories as $key => $item)
@@ -72,8 +86,6 @@
                                     <option value="{{ $item->name }}">{{ $item->name }}</option>
                                 @endforeach
                             </select>
-                        </td>
-                        <td>
                         </td>
                         <td>
                             <select class="search" strict="true">
@@ -97,7 +109,20 @@
                                 {{ $product->id ?? '' }}
                             </td>
                             <td>
-                                {{ $product->name ?? '' }}
+                                {{ $product->name_en ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->name_ar ?? '' }}
+                            </td>
+                            <td>
+                                {{ $product->name_he ?? '' }}
+                            </td>
+                            <td>
+                                @if($product->photo)
+                                    <a href="{{ $product->photo->getUrl() }}" target="_blank" style="display: inline-block">
+                                        <img src="{{ $product->photo->getUrl('thumb') }}">
+                                    </a>
+                                @endif
                             </td>
                             <td>
                                 @foreach($product->categories as $key => $item)
@@ -108,13 +133,6 @@
                                 @foreach($product->tags as $key => $item)
                                     <span class="badge badge-info">{{ $item->name }}</span>
                                 @endforeach
-                            </td>
-                            <td>
-                                @if($product->photo)
-                                    <a href="{{ $product->photo->getUrl() }}" target="_blank" style="display: inline-block">
-                                        <img src="{{ $product->photo->getUrl('thumb') }}">
-                                    </a>
-                                @endif
                             </td>
                             <td>
                                 {{ App\Models\Product::LANG_CODE_SELECT[$product->lang_code] ?? '' }}

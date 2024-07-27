@@ -2,58 +2,49 @@
 
 namespace App\Http\Requests;
 
-use App\Models\Product;
+use App\Models\AboutUsSection;
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Response;
 
-class StoreProductRequest extends FormRequest
+class StoreAboutUsSectionRequest extends FormRequest
 {
     public function authorize()
     {
-        return Gate::allows('product_create');
+        return Gate::allows('about_us_section_create');
     }
 
     public function rules()
     {
         return [
-            'name_en' => [
+            'title' => [
                 'string',
                 'required',
             ],
-            'name_ar' => [
+            'description' => [
+                'required',
+            ],
+            'ceo_name' => [
                 'string',
                 'required',
             ],
-            'name_he' => [
-                'string',
+            'ceo_description' => [
                 'required',
             ],
-            'description_en' => [
+            'ceo_image' => [
                 'required',
             ],
-            'description_ar' => [
+            'top_right' => [
                 'required',
             ],
-            'description_he' => [
+            'top_left' => [
                 'required',
             ],
-            'photo' => [
+            'bottom_right' => [
                 'required',
             ],
-            'categories.*' => [
-                'integer',
-            ],
-            'categories' => [
+            'bottom_left' => [
                 'required',
-                'array',
-            ],
-            'tags.*' => [
-                'integer',
-            ],
-            'tags' => [
-                'required',
-                'array',
             ],
             'lang_code' => [
                 'required',

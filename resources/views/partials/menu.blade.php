@@ -26,7 +26,7 @@
             </li>
         @endcan
         @can('section_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/about-uss*") ? "c-show" : "" }} {{ request()->is("admin/about-us-features*") ? "c-show" : "" }} {{ request()->is("admin/sliders*") ? "c-show" : "" }} {{ request()->is("admin/faqs*") ? "c-show" : "" }} {{ request()->is("admin/what-makes-differents*") ? "c-show" : "" }} {{ request()->is("admin/subscribes*") ? "c-show" : "" }}">
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/about-us-sections*") ? "c-show" : "" }} {{ request()->is("admin/about-us-features*") ? "c-show" : "" }} {{ request()->is("admin/sliders*") ? "c-show" : "" }} {{ request()->is("admin/faqs*") ? "c-show" : "" }} {{ request()->is("admin/what-makes-differents*") ? "c-show" : "" }} {{ request()->is("admin/subscribes*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
@@ -34,13 +34,13 @@
                     {{ trans('cruds.section.title') }}
                 </a>
                 <ul class="c-sidebar-nav-dropdown-items">
-                    @can('about_us_access')
+                    @can('about_us_section_access')
                         <li class="c-sidebar-nav-item">
-                            <a href="{{ route("admin.about-uss.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/about-uss") || request()->is("admin/about-uss/*") ? "c-active" : "" }}">
+                            <a href="{{ route("admin.about-us-sections.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/about-us-sections") || request()->is("admin/about-us-sections/*") ? "c-active" : "" }}">
                                 <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                                 </i>
-                                {{ trans('cruds.aboutUs.title') }}
+                                {{ trans('cruds.aboutUsSection.title') }}
                             </a>
                         </li>
                     @endcan
@@ -140,7 +140,7 @@
             </li>
         @endcan
         @can('user_management_access')
-            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }}">
+            <li class="c-sidebar-nav-dropdown {{ request()->is("admin/permissions*") ? "c-show" : "" }} {{ request()->is("admin/roles*") ? "c-show" : "" }} {{ request()->is("admin/users*") ? "c-show" : "" }} {{ request()->is("admin/audit-logs*") ? "c-show" : "" }}">
                 <a class="c-sidebar-nav-dropdown-toggle" href="#">
                     <i class="fa-fw fas fa-users c-sidebar-nav-icon">
 
@@ -175,6 +175,16 @@
 
                                 </i>
                                 {{ trans('cruds.user.title') }}
+                            </a>
+                        </li>
+                    @endcan
+                    @can('audit_log_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.audit-logs.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/audit-logs") || request()->is("admin/audit-logs/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-file-alt c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.auditLog.title') }}
                             </a>
                         </li>
                     @endcan
