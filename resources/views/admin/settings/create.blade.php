@@ -50,6 +50,66 @@
                 <span class="help-block">{{ trans('cruds.setting.fields.address_helper') }}</span>
             </div>
             <div class="form-group">
+                <label for="facebook_link">{{ trans('cruds.setting.fields.facebook_link') }}</label>
+                <input class="form-control {{ $errors->has('facebook_link') ? 'is-invalid' : '' }}" type="text" name="facebook_link" id="facebook_link" value="{{ old('facebook_link', '') }}">
+                @if($errors->has('facebook_link'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('facebook_link') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.setting.fields.facebook_link_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="instegram_link">{{ trans('cruds.setting.fields.instegram_link') }}</label>
+                <input class="form-control {{ $errors->has('instegram_link') ? 'is-invalid' : '' }}" type="text" name="instegram_link" id="instegram_link" value="{{ old('instegram_link', '') }}">
+                @if($errors->has('instegram_link'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('instegram_link') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.setting.fields.instegram_link_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="snapchat_link">{{ trans('cruds.setting.fields.snapchat_link') }}</label>
+                <input class="form-control {{ $errors->has('snapchat_link') ? 'is-invalid' : '' }}" type="text" name="snapchat_link" id="snapchat_link" value="{{ old('snapchat_link', '') }}">
+                @if($errors->has('snapchat_link'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('snapchat_link') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.setting.fields.snapchat_link_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="tiktok_link">{{ trans('cruds.setting.fields.tiktok_link') }}</label>
+                <input class="form-control {{ $errors->has('tiktok_link') ? 'is-invalid' : '' }}" type="text" name="tiktok_link" id="tiktok_link" value="{{ old('tiktok_link', '') }}">
+                @if($errors->has('tiktok_link'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('tiktok_link') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.setting.fields.tiktok_link_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="youtube_link">{{ trans('cruds.setting.fields.youtube_link') }}</label>
+                <input class="form-control {{ $errors->has('youtube_link') ? 'is-invalid' : '' }}" type="text" name="youtube_link" id="youtube_link" value="{{ old('youtube_link', '') }}">
+                @if($errors->has('youtube_link'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('youtube_link') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.setting.fields.youtube_link_helper') }}</span>
+            </div>
+            <div class="form-group">
+                <label for="top_bar_content_header">{{ trans('cruds.setting.fields.top_bar_content_header') }}</label>
+                <input class="form-control {{ $errors->has('top_bar_content_header') ? 'is-invalid' : '' }}" type="text" name="top_bar_content_header" id="top_bar_content_header" value="{{ old('top_bar_content_header', '') }}">
+                @if($errors->has('top_bar_content_header'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('top_bar_content_header') }}
+                    </div>
+                @endif
+                <span class="help-block">{{ trans('cruds.setting.fields.top_bar_content_header_helper') }}</span>
+            </div>
+            <div class="form-group">
                 <label class="required" for="logo">{{ trans('cruds.setting.fields.logo') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('logo') ? 'is-invalid' : '' }}" id="logo-dropzone">
                 </div>

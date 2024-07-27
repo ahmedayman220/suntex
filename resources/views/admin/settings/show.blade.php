@@ -57,6 +57,54 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.setting.fields.facebook_link') }}
+                        </th>
+                        <td>
+                            {{ $setting->facebook_link }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.setting.fields.instegram_link') }}
+                        </th>
+                        <td>
+                            {{ $setting->instegram_link }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.setting.fields.snapchat_link') }}
+                        </th>
+                        <td>
+                            {{ $setting->snapchat_link }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.setting.fields.tiktok_link') }}
+                        </th>
+                        <td>
+                            {{ $setting->tiktok_link }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.setting.fields.youtube_link') }}
+                        </th>
+                        <td>
+                            {{ $setting->youtube_link }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.setting.fields.top_bar_content_header') }}
+                        </th>
+                        <td>
+                            {{ $setting->top_bar_content_header }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.setting.fields.logo') }}
                         </th>
                         <td>
