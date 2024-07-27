@@ -96,342 +96,350 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 22,
-                'title' => 'about_us_create',
-            ],
-            [
-                'id'    => 23,
-                'title' => 'about_us_edit',
-            ],
-            [
-                'id'    => 24,
-                'title' => 'about_us_show',
-            ],
-            [
-                'id'    => 25,
-                'title' => 'about_us_delete',
-            ],
-            [
-                'id'    => 26,
-                'title' => 'about_us_access',
-            ],
-            [
-                'id'    => 27,
                 'title' => 'about_us_feature_create',
             ],
             [
-                'id'    => 28,
+                'id'    => 23,
                 'title' => 'about_us_feature_edit',
             ],
             [
-                'id'    => 29,
+                'id'    => 24,
                 'title' => 'about_us_feature_show',
             ],
             [
-                'id'    => 30,
+                'id'    => 25,
                 'title' => 'about_us_feature_delete',
             ],
             [
-                'id'    => 31,
+                'id'    => 26,
                 'title' => 'about_us_feature_access',
             ],
             [
-                'id'    => 32,
+                'id'    => 27,
                 'title' => 'faq_create',
             ],
             [
-                'id'    => 33,
+                'id'    => 28,
                 'title' => 'faq_edit',
             ],
             [
-                'id'    => 34,
+                'id'    => 29,
                 'title' => 'faq_show',
             ],
             [
-                'id'    => 35,
+                'id'    => 30,
                 'title' => 'faq_delete',
             ],
             [
-                'id'    => 36,
+                'id'    => 31,
                 'title' => 'faq_access',
             ],
             [
-                'id'    => 37,
+                'id'    => 32,
                 'title' => 'what_makes_different_create',
             ],
             [
-                'id'    => 38,
+                'id'    => 33,
                 'title' => 'what_makes_different_edit',
             ],
             [
-                'id'    => 39,
+                'id'    => 34,
                 'title' => 'what_makes_different_show',
             ],
             [
-                'id'    => 40,
+                'id'    => 35,
                 'title' => 'what_makes_different_delete',
             ],
             [
-                'id'    => 41,
+                'id'    => 36,
                 'title' => 'what_makes_different_access',
             ],
             [
-                'id'    => 42,
+                'id'    => 37,
                 'title' => 'product_management_access',
             ],
             [
-                'id'    => 43,
+                'id'    => 38,
                 'title' => 'product_category_create',
             ],
             [
-                'id'    => 44,
+                'id'    => 39,
                 'title' => 'product_category_edit',
             ],
             [
-                'id'    => 45,
+                'id'    => 40,
                 'title' => 'product_category_show',
             ],
             [
-                'id'    => 46,
+                'id'    => 41,
                 'title' => 'product_category_delete',
             ],
             [
-                'id'    => 47,
+                'id'    => 42,
                 'title' => 'product_category_access',
             ],
             [
-                'id'    => 48,
+                'id'    => 43,
                 'title' => 'product_tag_create',
             ],
             [
-                'id'    => 49,
+                'id'    => 44,
                 'title' => 'product_tag_edit',
             ],
             [
-                'id'    => 50,
+                'id'    => 45,
                 'title' => 'product_tag_show',
             ],
             [
-                'id'    => 51,
+                'id'    => 46,
                 'title' => 'product_tag_delete',
             ],
             [
-                'id'    => 52,
+                'id'    => 47,
                 'title' => 'product_tag_access',
             ],
             [
-                'id'    => 53,
+                'id'    => 48,
                 'title' => 'product_create',
             ],
             [
-                'id'    => 54,
+                'id'    => 49,
                 'title' => 'product_edit',
             ],
             [
-                'id'    => 55,
+                'id'    => 50,
                 'title' => 'product_show',
             ],
             [
-                'id'    => 56,
+                'id'    => 51,
                 'title' => 'product_delete',
             ],
             [
-                'id'    => 57,
+                'id'    => 52,
                 'title' => 'product_access',
             ],
             [
-                'id'    => 58,
+                'id'    => 53,
                 'title' => 'subscribe_create',
             ],
             [
-                'id'    => 59,
+                'id'    => 54,
                 'title' => 'subscribe_edit',
             ],
             [
-                'id'    => 60,
+                'id'    => 55,
                 'title' => 'subscribe_show',
             ],
             [
-                'id'    => 61,
+                'id'    => 56,
                 'title' => 'subscribe_delete',
             ],
             [
-                'id'    => 62,
+                'id'    => 57,
                 'title' => 'subscribe_access',
             ],
             [
-                'id'    => 63,
+                'id'    => 58,
                 'title' => 'setting_create',
             ],
             [
-                'id'    => 64,
+                'id'    => 59,
                 'title' => 'setting_edit',
             ],
             [
-                'id'    => 65,
+                'id'    => 60,
                 'title' => 'setting_show',
             ],
             [
-                'id'    => 66,
+                'id'    => 61,
                 'title' => 'setting_delete',
             ],
             [
-                'id'    => 67,
+                'id'    => 62,
                 'title' => 'setting_access',
             ],
             [
-                'id'    => 68,
+                'id'    => 63,
                 'title' => 'section_access',
             ],
             [
-                'id'    => 69,
+                'id'    => 64,
                 'title' => 'expense_management_access',
             ],
             [
-                'id'    => 70,
+                'id'    => 65,
                 'title' => 'expense_category_create',
             ],
             [
-                'id'    => 71,
+                'id'    => 66,
                 'title' => 'expense_category_edit',
             ],
             [
-                'id'    => 72,
+                'id'    => 67,
                 'title' => 'expense_category_show',
             ],
             [
-                'id'    => 73,
+                'id'    => 68,
                 'title' => 'expense_category_delete',
             ],
             [
-                'id'    => 74,
+                'id'    => 69,
                 'title' => 'expense_category_access',
             ],
             [
-                'id'    => 75,
+                'id'    => 70,
                 'title' => 'income_category_create',
             ],
             [
-                'id'    => 76,
+                'id'    => 71,
                 'title' => 'income_category_edit',
             ],
             [
-                'id'    => 77,
+                'id'    => 72,
                 'title' => 'income_category_show',
             ],
             [
-                'id'    => 78,
+                'id'    => 73,
                 'title' => 'income_category_delete',
             ],
             [
-                'id'    => 79,
+                'id'    => 74,
                 'title' => 'income_category_access',
             ],
             [
-                'id'    => 80,
+                'id'    => 75,
                 'title' => 'expense_create',
             ],
             [
-                'id'    => 81,
+                'id'    => 76,
                 'title' => 'expense_edit',
             ],
             [
-                'id'    => 82,
+                'id'    => 77,
                 'title' => 'expense_show',
             ],
             [
-                'id'    => 83,
+                'id'    => 78,
                 'title' => 'expense_delete',
             ],
             [
-                'id'    => 84,
+                'id'    => 79,
                 'title' => 'expense_access',
             ],
             [
-                'id'    => 85,
+                'id'    => 80,
                 'title' => 'income_create',
             ],
             [
-                'id'    => 86,
+                'id'    => 81,
                 'title' => 'income_edit',
             ],
             [
-                'id'    => 87,
+                'id'    => 82,
                 'title' => 'income_show',
             ],
             [
-                'id'    => 88,
+                'id'    => 83,
                 'title' => 'income_delete',
             ],
             [
-                'id'    => 89,
+                'id'    => 84,
                 'title' => 'income_access',
             ],
             [
-                'id'    => 90,
+                'id'    => 85,
                 'title' => 'expense_report_create',
             ],
             [
-                'id'    => 91,
+                'id'    => 86,
                 'title' => 'expense_report_edit',
             ],
             [
-                'id'    => 92,
+                'id'    => 87,
                 'title' => 'expense_report_show',
             ],
             [
-                'id'    => 93,
+                'id'    => 88,
                 'title' => 'expense_report_delete',
             ],
             [
-                'id'    => 94,
+                'id'    => 89,
                 'title' => 'expense_report_access',
             ],
             [
-                'id'    => 95,
+                'id'    => 90,
                 'title' => 'contact_management_access',
             ],
             [
-                'id'    => 96,
+                'id'    => 91,
                 'title' => 'contact_company_create',
             ],
             [
-                'id'    => 97,
+                'id'    => 92,
                 'title' => 'contact_company_edit',
             ],
             [
-                'id'    => 98,
+                'id'    => 93,
                 'title' => 'contact_company_show',
             ],
             [
-                'id'    => 99,
+                'id'    => 94,
                 'title' => 'contact_company_delete',
             ],
             [
-                'id'    => 100,
+                'id'    => 95,
                 'title' => 'contact_company_access',
             ],
             [
-                'id'    => 101,
+                'id'    => 96,
                 'title' => 'contact_contact_create',
             ],
             [
-                'id'    => 102,
+                'id'    => 97,
                 'title' => 'contact_contact_edit',
             ],
             [
-                'id'    => 103,
+                'id'    => 98,
                 'title' => 'contact_contact_show',
             ],
             [
-                'id'    => 104,
+                'id'    => 99,
                 'title' => 'contact_contact_delete',
             ],
             [
-                'id'    => 105,
+                'id'    => 100,
                 'title' => 'contact_contact_access',
             ],
             [
+                'id'    => 101,
+                'title' => 'about_us_section_create',
+            ],
+            [
+                'id'    => 102,
+                'title' => 'about_us_section_edit',
+            ],
+            [
+                'id'    => 103,
+                'title' => 'about_us_section_show',
+            ],
+            [
+                'id'    => 104,
+                'title' => 'about_us_section_delete',
+            ],
+            [
+                'id'    => 105,
+                'title' => 'about_us_section_access',
+            ],
+            [
                 'id'    => 106,
+                'title' => 'audit_log_show',
+            ],
+            [
+                'id'    => 107,
+                'title' => 'audit_log_access',
+            ],
+            [
+                'id'    => 108,
                 'title' => 'profile_password_edit',
             ],
         ];

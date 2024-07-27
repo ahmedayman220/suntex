@@ -31,12 +31,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('sliders/ckmedia', 'SliderController@storeCKEditorImages')->name('sliders.storeCKEditorImages');
     Route::resource('sliders', 'SliderController');
 
-    // About Us
-    Route::delete('about-uss/destroy', 'AboutUsController@massDestroy')->name('about-uss.massDestroy');
-    Route::post('about-uss/media', 'AboutUsController@storeMedia')->name('about-uss.storeMedia');
-    Route::post('about-uss/ckmedia', 'AboutUsController@storeCKEditorImages')->name('about-uss.storeCKEditorImages');
-    Route::resource('about-uss', 'AboutUsController');
-
     // About Us Features
     Route::delete('about-us-features/destroy', 'AboutUsFeaturesController@massDestroy')->name('about-us-features.massDestroy');
     Route::resource('about-us-features', 'AboutUsFeaturesController');
@@ -112,6 +106,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Contact Contacts
     Route::delete('contact-contacts/destroy', 'ContactContactsController@massDestroy')->name('contact-contacts.massDestroy');
     Route::resource('contact-contacts', 'ContactContactsController');
+
+    // About Us Section
+    Route::delete('about-us-sections/destroy', 'AboutUsSectionController@massDestroy')->name('about-us-sections.massDestroy');
+    Route::post('about-us-sections/media', 'AboutUsSectionController@storeMedia')->name('about-us-sections.storeMedia');
+    Route::post('about-us-sections/ckmedia', 'AboutUsSectionController@storeCKEditorImages')->name('about-us-sections.storeCKEditorImages');
+    Route::resource('about-us-sections', 'AboutUsSectionController');
+
+    // Audit Logs
+    Route::resource('audit-logs', 'AuditLogsController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
 
     Route::get('messenger', 'MessengerController@index')->name('messenger.index');
     Route::get('messenger/create', 'MessengerController@createTopic')->name('messenger.createTopic');

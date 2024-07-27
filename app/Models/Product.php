@@ -33,8 +33,12 @@ class Product extends Model implements HasMedia
     ];
 
     protected $fillable = [
-        'name',
-        'description',
+        'name_en',
+        'name_ar',
+        'name_he',
+        'description_en',
+        'description_ar',
+        'description_he',
         'lang_code',
         'created_at',
         'updated_at',
@@ -52,16 +56,6 @@ class Product extends Model implements HasMedia
         $this->addMediaConversion('preview')->fit('crop', 120, 120);
     }
 
-    public function categories()
-    {
-        return $this->belongsToMany(ProductCategory::class);
-    }
-
-    public function tags()
-    {
-        return $this->belongsToMany(ProductTag::class);
-    }
-
     public function getPhotoAttribute()
     {
         $file = $this->getMedia('photo')->last();
@@ -72,5 +66,15 @@ class Product extends Model implements HasMedia
         }
 
         return $file;
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(ProductCategory::class);
+    }
+
+    public function tags()
+    {
+        return $this->belongsToMany(ProductTag::class);
     }
 }

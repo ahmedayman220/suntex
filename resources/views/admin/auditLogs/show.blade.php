@@ -3,13 +3,13 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.slider.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.auditLog.title') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('admin.sliders.index') }}">
+                <a class="btn btn-default" href="{{ route('admin.audit-logs.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>
@@ -17,72 +17,72 @@
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.slider.fields.id') }}
+                            {{ trans('cruds.auditLog.fields.id') }}
                         </th>
                         <td>
-                            {{ $slider->id }}
+                            {{ $auditLog->id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.slider.fields.title') }}
+                            {{ trans('cruds.auditLog.fields.description') }}
                         </th>
                         <td>
-                            {{ $slider->title }}
+                            {{ $auditLog->description }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.slider.fields.description') }}
+                            {{ trans('cruds.auditLog.fields.subject_id') }}
                         </th>
                         <td>
-                            {!! $slider->description !!}
+                            {{ $auditLog->subject_id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.slider.fields.lang_code') }}
+                            {{ trans('cruds.auditLog.fields.subject_type') }}
                         </th>
                         <td>
-                            {{ App\Models\Slider::LANG_CODE_SELECT[$slider->lang_code] ?? '' }}
+                            {{ $auditLog->subject_type }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.slider.fields.image') }}
+                            {{ trans('cruds.auditLog.fields.user_id') }}
                         </th>
                         <td>
-                            @if($slider->image)
-                                <a href="{{ $slider->image->getUrl() }}" target="_blank" style="display: inline-block">
-                                    <img src="{{ $slider->image->getUrl('thumb') }}">
-                                </a>
-                            @endif
+                            {{ $auditLog->user_id }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.slider.fields.hero_image') }}
+                            {{ trans('cruds.auditLog.fields.properties') }}
                         </th>
                         <td>
-                            @if($slider->hero_image)
-                                <a href="{{ $slider->hero_image->getUrl() }}" target="_blank" style="display: inline-block">
-                                    <img src="{{ $slider->hero_image->getUrl('thumb') }}">
-                                </a>
-                            @endif
+                            {{ $auditLog->properties }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.slider.fields.product_link') }}
+                            {{ trans('cruds.auditLog.fields.host') }}
                         </th>
                         <td>
-                            {{ $slider->product_link }}
+                            {{ $auditLog->host }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.auditLog.fields.created_at') }}
+                        </th>
+                        <td>
+                            {{ $auditLog->created_at }}
                         </td>
                     </tr>
                 </tbody>
             </table>
             <div class="form-group">
-                <a class="btn btn-default" href="{{ route('admin.sliders.index') }}">
+                <a class="btn btn-default" href="{{ route('admin.audit-logs.index') }}">
                     {{ trans('global.back_to_list') }}
                 </a>
             </div>

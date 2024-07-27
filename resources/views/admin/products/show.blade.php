@@ -25,18 +25,62 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.product.fields.name') }}
+                            {{ trans('cruds.product.fields.name_en') }}
                         </th>
                         <td>
-                            {{ $product->name }}
+                            {{ $product->name_en }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.product.fields.description') }}
+                            {{ trans('cruds.product.fields.name_ar') }}
                         </th>
                         <td>
-                            {!! $product->description !!}
+                            {{ $product->name_ar }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.name_he') }}
+                        </th>
+                        <td>
+                            {{ $product->name_he }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.description_en') }}
+                        </th>
+                        <td>
+                            {!! $product->description_en !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.description_ar') }}
+                        </th>
+                        <td>
+                            {!! $product->description_ar !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.description_he') }}
+                        </th>
+                        <td>
+                            {!! $product->description_he !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.product.fields.photo') }}
+                        </th>
+                        <td>
+                            @if($product->photo)
+                                <a href="{{ $product->photo->getUrl() }}" target="_blank" style="display: inline-block">
+                                    <img src="{{ $product->photo->getUrl('thumb') }}">
+                                </a>
+                            @endif
                         </td>
                     </tr>
                     <tr>
@@ -57,18 +101,6 @@
                             @foreach($product->tags as $key => $tag)
                                 <span class="label label-info">{{ $tag->name }}</span>
                             @endforeach
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.product.fields.photo') }}
-                        </th>
-                        <td>
-                            @if($product->photo)
-                                <a href="{{ $product->photo->getUrl() }}" target="_blank" style="display: inline-block">
-                                    <img src="{{ $product->photo->getUrl('thumb') }}">
-                                </a>
-                            @endif
                         </td>
                     </tr>
                     <tr>

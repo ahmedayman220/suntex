@@ -29,9 +29,6 @@
                             {{ trans('cruds.slider.fields.title') }}
                         </th>
                         <th>
-                            {{ trans('cruds.slider.fields.description') }}
-                        </th>
-                        <th>
                             {{ trans('cruds.slider.fields.lang_code') }}
                         </th>
                         <th>
@@ -49,9 +46,6 @@
                     </tr>
                     <tr>
                         <td>
-                        </td>
-                        <td>
-                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                         </td>
                         <td>
                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
@@ -89,9 +83,6 @@
                             </td>
                             <td>
                                 {{ $slider->title ?? '' }}
-                            </td>
-                            <td>
-                                {{ $slider->description ?? '' }}
                             </td>
                             <td>
                                 {{ App\Models\Slider::LANG_CODE_SELECT[$slider->lang_code] ?? '' }}
