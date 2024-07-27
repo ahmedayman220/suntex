@@ -17,17 +17,28 @@ class StoreProductCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => [
+            'name_ar' => [
                 'string',
                 'required',
             ],
-            'description' => [
+            'name_en' => [
+                'string',
+                'required',
+            ],
+            'name_he' => [
+                'string',
+                'required',
+            ],
+            'description_ar' => [
+                'required',
+            ],
+            'description_en' => [
+                'required',
+            ],
+            'description_he' => [
                 'required',
             ],
             'photo' => [
-                'required',
-            ],
-            'lang_code' => [
                 'required',
             ],
         ];

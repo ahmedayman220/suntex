@@ -117,21 +117,6 @@
                 <span class="help-block">{{ trans('cruds.product.fields.tag_helper') }}</span>
             </div>
             <div class="form-group">
-                <label class="required">{{ trans('cruds.product.fields.lang_code') }}</label>
-                <select class="form-control {{ $errors->has('lang_code') ? 'is-invalid' : '' }}" name="lang_code" id="lang_code" required>
-                    <option value disabled {{ old('lang_code', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
-                    @foreach(App\Models\Product::LANG_CODE_SELECT as $key => $label)
-                        <option value="{{ $key }}" {{ old('lang_code', 'en') === (string) $key ? 'selected' : '' }}>{{ $label }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('lang_code'))
-                    <div class="invalid-feedback">
-                        {{ $errors->first('lang_code') }}
-                    </div>
-                @endif
-                <span class="help-block">{{ trans('cruds.product.fields.lang_code_helper') }}</span>
-            </div>
-            <div class="form-group">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

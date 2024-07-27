@@ -25,18 +25,50 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.productCategory.fields.name') }}
+                            {{ trans('cruds.productCategory.fields.name_ar') }}
                         </th>
                         <td>
-                            {{ $productCategory->name }}
+                            {{ $productCategory->name_ar }}
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.productCategory.fields.description') }}
+                            {{ trans('cruds.productCategory.fields.name_en') }}
                         </th>
                         <td>
-                            {{ $productCategory->description }}
+                            {{ $productCategory->name_en }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.productCategory.fields.name_he') }}
+                        </th>
+                        <td>
+                            {{ $productCategory->name_he }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.productCategory.fields.description_ar') }}
+                        </th>
+                        <td>
+                            {!! $productCategory->description_ar !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.productCategory.fields.description_en') }}
+                        </th>
+                        <td>
+                            {!! $productCategory->description_en !!}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{ trans('cruds.productCategory.fields.description_he') }}
+                        </th>
+                        <td>
+                            {!! $productCategory->description_he !!}
                         </td>
                     </tr>
                     <tr>
@@ -51,14 +83,6 @@
                             @endif
                         </td>
                     </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.productCategory.fields.lang_code') }}
-                        </th>
-                        <td>
-                            {{ App\Models\ProductCategory::LANG_CODE_SELECT[$productCategory->lang_code] ?? '' }}
-                        </td>
-                    </tr>
                 </tbody>
             </table>
             <div class="form-group">
@@ -70,6 +94,22 @@
     </div>
 </div>
 
-
+<div class="card">
+    <div class="card-header">
+        {{ trans('global.relatedData') }}
+    </div>
+    <ul class="nav nav-tabs" role="tablist" id="relationship-tabs">
+        <li class="nav-item">
+            <a class="nav-link" href="#category_products" role="tab" data-toggle="tab">
+                {{ trans('cruds.product.title') }}
+            </a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane" role="tabpanel" id="category_products">
+            @includeIf('admin.productCategories.relationships.categoryProducts', ['products' => $productCategory->categoryProducts])
+        </div>
+    </div>
+</div>
 
 @endsection

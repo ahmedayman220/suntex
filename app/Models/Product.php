@@ -26,12 +26,6 @@ class Product extends Model implements HasMedia
         'deleted_at',
     ];
 
-    public const LANG_CODE_SELECT = [
-        'en' => 'English',
-        'ar' => 'Arabic',
-        'he' => 'Hebrew',
-    ];
-
     protected $fillable = [
         'name_en',
         'name_ar',
@@ -39,7 +33,6 @@ class Product extends Model implements HasMedia
         'description_en',
         'description_ar',
         'description_he',
-        'lang_code',
         'created_at',
         'updated_at',
         'deleted_at',

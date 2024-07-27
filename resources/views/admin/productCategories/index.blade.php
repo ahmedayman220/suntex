@@ -30,16 +30,16 @@
                             {{ trans('cruds.productCategory.fields.id') }}
                         </th>
                         <th>
-                            {{ trans('cruds.productCategory.fields.name') }}
+                            {{ trans('cruds.productCategory.fields.name_ar') }}
                         </th>
                         <th>
-                            {{ trans('cruds.productCategory.fields.description') }}
+                            {{ trans('cruds.productCategory.fields.name_en') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.productCategory.fields.name_he') }}
                         </th>
                         <th>
                             {{ trans('cruds.productCategory.fields.photo') }}
-                        </th>
-                        <th>
-                            {{ trans('cruds.productCategory.fields.lang_code') }}
                         </th>
                         <th>
                             &nbsp;
@@ -58,14 +58,9 @@
                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                         </td>
                         <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                         </td>
                         <td>
-                            <select class="search" strict="true">
-                                <option value>{{ trans('global.all') }}</option>
-                                @foreach(App\Models\ProductCategory::LANG_CODE_SELECT as $key => $item)
-                                    <option value="{{ $item }}">{{ $item }}</option>
-                                @endforeach
-                            </select>
                         </td>
                         <td>
                         </td>
@@ -81,10 +76,13 @@
                                 {{ $productCategory->id ?? '' }}
                             </td>
                             <td>
-                                {{ $productCategory->name ?? '' }}
+                                {{ $productCategory->name_ar ?? '' }}
                             </td>
                             <td>
-                                {{ $productCategory->description ?? '' }}
+                                {{ $productCategory->name_en ?? '' }}
+                            </td>
+                            <td>
+                                {{ $productCategory->name_he ?? '' }}
                             </td>
                             <td>
                                 @if($productCategory->photo)
@@ -92,9 +90,6 @@
                                         <img src="{{ $productCategory->photo->getUrl('thumb') }}">
                                     </a>
                                 @endif
-                            </td>
-                            <td>
-                                {{ App\Models\ProductCategory::LANG_CODE_SELECT[$productCategory->lang_code] ?? '' }}
                             </td>
                             <td>
                                 @can('product_category_show')

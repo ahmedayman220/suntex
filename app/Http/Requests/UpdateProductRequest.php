@@ -55,9 +55,6 @@ class UpdateProductRequest extends FormRequest
                 'required',
                 'array',
             ],
-            'lang_code' => [
-                'required',
-            ],
         ];
     }
 }

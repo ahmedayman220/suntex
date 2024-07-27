@@ -26,16 +26,13 @@ class ProductCategory extends Model implements HasMedia
         'deleted_at',
     ];
 
-    public const LANG_CODE_SELECT = [
-        'en' => 'English',
-        'ar' => 'Arabic',
-        'he' => 'Hebrew',
-    ];
-
     protected $fillable = [
-        'name',
-        'description',
-        'lang_code',
+        'name_ar',
+        'name_en',
+        'name_he',
+        'description_ar',
+        'description_en',
+        'description_he',
         'created_at',
         'updated_at',
         'deleted_at',
@@ -50,6 +47,11 @@ class ProductCategory extends Model implements HasMedia
     {
         $this->addMediaConversion('thumb')->fit('crop', 50, 50);
         $this->addMediaConversion('preview')->fit('crop', 120, 120);
+    }
+
+    public function categoryProducts()
+    {
+        return $this->belongsToMany(Product::class);
     }
 
     public function getPhotoAttribute()
