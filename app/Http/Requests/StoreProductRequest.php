@@ -55,9 +55,6 @@ class StoreProductRequest extends FormRequest
                 'required',
                 'array',
             ],
-            'lang_code' => [
-                'required',
-            ],
         ];
     }
 }

@@ -16,7 +16,6 @@ class CreateProductsTable extends Migration
             $table->longText('description_en')->nullable();
             $table->longText('description_ar')->nullable();
             $table->longText('description_he')->nullable();
-            $table->string('lang_code')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

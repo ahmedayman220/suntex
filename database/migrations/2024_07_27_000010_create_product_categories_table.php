@@ -10,9 +10,12 @@ class CreateProductCategoriesTable extends Migration
     {
         Schema::create('product_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name')->nullable();
-            $table->longText('description')->nullable();
-            $table->string('lang_code')->nullable();
+            $table->string('name_ar')->nullable();
+            $table->string('name_en')->nullable();
+            $table->string('name_he')->nullable();
+            $table->longText('description_ar')->nullable();
+            $table->longText('description_en')->nullable();
+            $table->longText('description_he')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

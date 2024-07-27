@@ -89,7 +89,7 @@
                         </th>
                         <td>
                             @foreach($product->categories as $key => $category)
-                                <span class="label label-info">{{ $category->name }}</span>
+                                <span class="label label-info">{{ $category->name_en }}</span>
                             @endforeach
                         </td>
                     </tr>
@@ -101,14 +101,6 @@
                             @foreach($product->tags as $key => $tag)
                                 <span class="label label-info">{{ $tag->name }}</span>
                             @endforeach
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.product.fields.lang_code') }}
-                        </th>
-                        <td>
-                            {{ App\Models\Product::LANG_CODE_SELECT[$product->lang_code] ?? '' }}
                         </td>
                     </tr>
                 </tbody>
