@@ -38,6 +38,24 @@
                             {{ trans('cruds.setting.fields.address') }}
                         </th>
                         <th>
+                            {{ trans('cruds.setting.fields.facebook_link') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.setting.fields.instegram_link') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.setting.fields.snapchat_link') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.setting.fields.tiktok_link') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.setting.fields.youtube_link') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.setting.fields.top_bar_content_header') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.setting.fields.logo') }}
                         </th>
                         <th>
@@ -49,6 +67,24 @@
                     </tr>
                     <tr>
                         <td>
+                        </td>
+                        <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                        </td>
+                        <td>
+                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                         </td>
                         <td>
                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
@@ -93,6 +129,24 @@
                             </td>
                             <td>
                                 {{ $setting->address ?? '' }}
+                            </td>
+                            <td>
+                                {{ $setting->facebook_link ?? '' }}
+                            </td>
+                            <td>
+                                {{ $setting->instegram_link ?? '' }}
+                            </td>
+                            <td>
+                                {{ $setting->snapchat_link ?? '' }}
+                            </td>
+                            <td>
+                                {{ $setting->tiktok_link ?? '' }}
+                            </td>
+                            <td>
+                                {{ $setting->youtube_link ?? '' }}
+                            </td>
+                            <td>
+                                {{ $setting->top_bar_content_header ?? '' }}
                             </td>
                             <td>
                                 @if($setting->logo)

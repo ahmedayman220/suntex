@@ -14,6 +14,12 @@ class CreateSettingsTable extends Migration
             $table->string('phone_number');
             $table->string('email')->nullable();
             $table->string('address');
+            $table->string('facebook_link')->nullable();
+            $table->string('instegram_link')->nullable();
+            $table->string('snapchat_link')->nullable();
+            $table->string('tiktok_link')->nullable();
+            $table->string('youtube_link')->nullable();
+            $table->string('top_bar_content_header')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

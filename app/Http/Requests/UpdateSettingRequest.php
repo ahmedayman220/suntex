@@ -29,6 +29,30 @@ class UpdateSettingRequest extends FormRequest
                 'string',
                 'required',
             ],
+            'facebook_link' => [
+                'string',
+                'nullable',
+            ],
+            'instegram_link' => [
+                'string',
+                'nullable',
+            ],
+            'snapchat_link' => [
+                'string',
+                'nullable',
+            ],
+            'tiktok_link' => [
+                'string',
+                'nullable',
+            ],
+            'youtube_link' => [
+                'string',
+                'nullable',
+            ],
+            'top_bar_content_header' => [
+                'string',
+                'nullable',
+            ],
             'logo' => [
                 'required',
             ],
